@@ -1,10 +1,11 @@
-# Mini Honeypot
-
-A small Python honeypot that imitates an SSH-style TCP service and logs
-every connection attempt (IP, time, data sent).
-
-## Status
-Work in progress.
+# Honeypot
+A small Python honeypot that listens on a fake SSH port and logs visitors.
 
 ## Run
-    python main.py
+    python3 main.py
+
+## Test
+    nc 127.0.0.1 2222
+    cat logs/honeypot.log
+
+Only run this on machines and networks you own.
