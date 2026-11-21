@@ -1,4 +1,6 @@
-logs/*.log
-__pycache__/
 .venv/
+__pycache__/
 *.pyc
+.DS_Store
+logs/*
+!logs/.gitkeep
