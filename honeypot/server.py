@@ -1,4 +1,5 @@
 import socket
+import threading
 from honeypot import config
 from honeypot.handler import handle_client
 
@@ -14,7 +15,11 @@ def start_server():
         while True:
             conn, addr = server.accept()
             print(f"[+] Connection from {addr[0]}:{addr[1]}")
-            handle_client(conn, addr)
+            thread = threading.Thread(
+                target=handle_client,
+                args=(conn, addr),
+                daemon=True,
+            )
     except KeyboardInterrupt:
         print("\n[*] Shutting down")
     finally:
