@@ -20,6 +20,7 @@ def start_server():
                 args=(conn, addr),
                 daemon=True,
             )
+            thread.start()
     except KeyboardInterrupt:
         print("\n[*] Shutting down")
     finally:
