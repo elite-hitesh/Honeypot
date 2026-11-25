@@ -1,4 +1,15 @@
 HOST = "127.0.0.1"
 PORT = 2222
-BANNER = b"SSH-2.0-OpenSSH_8.9\r\n"
-LOG_FILE ="logs/honeypot.log"
+
+BANNER = b"Ubuntu 22.04.3 LTS\r\n"
+LOGIN_PROMPT = b"login: "
+PASSWORD_PROMPT = b"Password: "
+DENIED_MESSAGE = b"Login incorrect\r\n"
+LOCKOUT_MESSAGE = b"Too many failed attempts\r\n"
+
+MAX_ATTEMPTS = 3
+TIMEOUT = 30
+MAX_INPUT = 256
+
+LOG_FILE = "logs/honeypot.log"
+CREDS_FILE = "logs/credentials.jsonl"
