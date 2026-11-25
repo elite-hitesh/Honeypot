@@ -70,8 +70,11 @@ def score_ip(attempts):
 
 
 def level(score):
+    
     if score >= config.SCORE_HIGH:
         return "high"
+    
     if score >= config.SCORE_MEDIUM:
         return "medium"
+    
     return "low"
