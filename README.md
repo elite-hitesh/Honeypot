@@ -6,7 +6,7 @@ A small Python honeypot that listens on a fake SSH port and logs everyone who co
 - [x] Stage 1: TCP server, fake SSH banner, event logging
 - [x] Stage 2: Multiple clients at once (threading)
 - [x] Stage 3: Fake login prompt that captures credentials
-- [ ] Stage 4: Threat score per IP
+- [x] Stage 4: Threat score per IP
 - [ ] Stage 5: Live terminal dashboard
 
 ## Project structure
