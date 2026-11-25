@@ -13,3 +13,12 @@ MAX_INPUT = 256
 
 LOG_FILE = "logs/honeypot.log"
 CREDS_FILE = "logs/credentials.jsonl"
+
+COMMON_USERNAMES = {
+    "root", "admin", "administrator", "user", "test",
+    "guest", "ubuntu", "oracle", "postgres", "pi",
+}
+BURST_ATTEMPTS = 5
+BURST_WINDOW = 60
+SCORE_MEDIUM = 10
+SCORE_HIGH = 25
